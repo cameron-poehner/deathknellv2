@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Montserrat&display=swap');
+
+:root {
+    --main-font-family: 'Rubik Mono One', sans-serif;
+    --secondary-font-family: 'Montserrat', sans-serif;
+    --main-font-color: #e9e9f0;
+    --secondary-font-color: #323238;
+    --main-bg-color: white;
+    --secondary-bg-color: #000000;
+    font-size: 8px;
+    margin: 0;
+    padding: 0;
+}
