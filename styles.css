@@ -161,7 +161,7 @@ h2.music-header {
     grid-column-end: 7;
     grid-row-start: 3;
     grid-row-end: 5;
-    background-image: linear-gradient(0deg, rgba(211, 211, 211, 0.4), rgba(211, 211, 211, 0.4)), url(cover-v1.jpg);
+    background-image: linear-gradient(0deg, rgba(211, 211, 211, 0.4), rgba(211, 211, 211, 0.4)), url(cover.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -190,6 +190,24 @@ h2.music-header {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+}
+
+div.music-links {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    justify-self: center;
+    align-self: end;
+    color: var(--main-font-color);
+    margin-bottom: 3rem;
+}
+
+.social-music {
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
 }
 
 .reviews {
