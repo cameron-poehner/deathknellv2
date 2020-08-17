@@ -102,6 +102,15 @@ button:hover {
     background-color: blue;
 }
 
+.fas {
+    margin-top: 30rem;
+}
+
+.hidden {
+    height: 0px;
+    visibility: hidden;
+}
+
 h2.about-header {
     grid-column-start: 1;
     grid-column-end: 7;
