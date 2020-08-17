@@ -16,7 +16,7 @@
 .page-wrapper {
     display: grid; 
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 1fr 1fr .25fr 1fr 1fr .5fr;
+    grid-template-rows: 100vh .75fr .25fr .75fr .1fr 1.25fr .1fr;
     margin: 0;
     padding: 0;
     background-image:linear-gradient(0deg, rgba(211, 211, 211, 0.4), rgba(211, 211, 211, 0.4)), url(Hero2.jpg);
@@ -140,7 +140,7 @@ div.donate-btn {
     grid-row-end: 3;
     align-self: end;
     justify-self: center;
-    margin-bottom: 7rem;
+    margin-bottom: 10rem;
 }
 
 h2.music-header {
@@ -176,7 +176,6 @@ h2.music-header {
     justify-self: center;
     display: flex;
     justify-content: space-around;
-    padding: 3rem;
 }
 
 .music-audio {
@@ -200,7 +199,6 @@ div.music-links {
     justify-self: center;
     align-self: end;
     color: var(--main-font-color);
-    margin-bottom: 3rem;
 }
 
 .social-music {
@@ -208,19 +206,51 @@ div.music-links {
     text-decoration: none;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
+    height: 20vh;
+}
+
+h2.reviews-header {
+    font-family: var(--main-font-family);
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    justify-self: center;
+    align-self: start;
+    font-size: 7rem;
 }
 
 .reviews {
-    font-family: var(--main-font-family);
-    grid-column-start: 1;
-    grid-column-end: 7;
-    grid-row-start: 5;
-    grid-row-end: 6;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    font-family: var(--secondary-font-family);
+    align-self: center;
+    justify-self: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.424);
+    overflow: scroll;
+    padding: 3rem;
+    margin-bottom: 7rem;
+    background-color: #d7dbde;
 }
 
 footer {
     grid-column-start: 1;
     grid-column-end: 7;
-    grid-row-start: 6;
-    grid-row-end: 7;
+    grid-row-start: 7;
+    grid-row-end: 8;
+    background-color: #000000;
+    color: var(--main-font-color);
+    font-family: var(--secondary-font-family);
+    font-size: 2rem;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
