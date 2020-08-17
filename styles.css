@@ -15,8 +15,8 @@
 
 .page-wrapper {
     display: grid; 
-    grid-template-columns: .75fr repeat(5, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr .5fr 1fr 1fr .5fr;
     margin: 0;
     padding: 0;
     background-image:linear-gradient(0deg, rgba(211, 211, 211, 0.4), rgba(211, 211, 211, 0.4)), url(hero2.jpg);
@@ -113,16 +113,44 @@ h2.about {
 }
 
 .about {
-    grid-column-start: 1;
-    grid-column-end: 7;
+    grid-column-start: 2;
+    grid-column-end: 6;
     grid-row-start: 2;
     grid-row-end: 3;
     justify-self: center;
-    align-self: center;
+    align-self: start;
+    margin-top: 5rem;
 }
 
 .bio-container {
+    border: 2px solid black;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.424);
+    background-color: #d7dbde;
+    padding: 4rem;
+    overflow: scroll;
+}
 
+div.donate-btn {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    align-self: end;
+    justify-self: center;
+
+}
+
+h2.music-header {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    justify-self: center;
+    align-self: start;
+    font-size: 7rem;
+    font-family: var(--main-font-family);
 }
 
 .music {
