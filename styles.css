@@ -16,10 +16,10 @@
 .page-wrapper {
     display: grid; 
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 1fr .5fr 1fr 1fr .5fr;
+    grid-template-rows: 1fr 1fr .25fr 1fr 1fr .5fr;
     margin: 0;
     padding: 0;
-    background-image:linear-gradient(0deg, rgba(211, 211, 211, 0.4), rgba(211, 211, 211, 0.4)), url(hero2.jpg);
+    background-image:linear-gradient(0deg, rgba(211, 211, 211, 0.4), rgba(211, 211, 211, 0.4)), url(Hero2.jpg);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -36,6 +36,7 @@
     justify-items: end;
     position: fixed;
     padding-top: 10px;
+    z-index: 2;
 }
 
 .nav {
@@ -101,15 +102,16 @@ button:hover {
     background-color: blue;
 }
 
-h2.about {
+h2.about-header {
     grid-column-start: 1;
     grid-column-end: 7;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
     justify-self: center;
-    align-self: end;
+    align-self: start;
     font-family: var(--main-font-family);
     font-size: 7rem;
+    color: var(--main-font-color);
 }
 
 .about {
@@ -118,8 +120,7 @@ h2.about {
     grid-row-start: 2;
     grid-row-end: 3;
     justify-self: center;
-    align-self: start;
-    margin-top: 5rem;
+    align-self: center;
 }
 
 .bio-container {
@@ -139,39 +140,69 @@ div.donate-btn {
     grid-row-end: 3;
     align-self: end;
     justify-self: center;
-
+    margin-bottom: 7rem;
 }
 
 h2.music-header {
-    grid-column-start: 3;
-    grid-column-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 7;
     grid-row-start: 3;
     grid-row-end: 4;
     justify-self: center;
     align-self: start;
     font-size: 7rem;
     font-family: var(--main-font-family);
+    color: var(--main-font-color);
+    z-index: 1;
 }
 
-.music {
-    font-family: var(--main-font-family);
+.background {
     grid-column-start: 1;
     grid-column-end: 7;
     grid-row-start: 3;
-    grid-row-end: 4;
+    grid-row-end: 5;
+    background-image: linear-gradient(0deg, rgba(211, 211, 211, 0.4), rgba(211, 211, 211, 0.4)), url(cover-v1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.music-video {
+    font-family: var(--main-font-family);
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    align-self: start;
+    justify-self: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem;
+}
+
+.music-audio {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .reviews {
     font-family: var(--main-font-family);
     grid-column-start: 1;
     grid-column-end: 7;
-    grid-row-start: 4;
-    grid-row-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 6;
 }
 
 footer {
     grid-column-start: 1;
     grid-column-end: 7;
-    grid-row-start: 5;
-    grid-row-end: 6;
+    grid-row-start: 6;
+    grid-row-end: 7;
 }
