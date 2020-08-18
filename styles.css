@@ -16,7 +16,7 @@
 .page-wrapper {
     display: grid; 
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 100vh .75fr .25fr .75fr .1fr 1.25fr .1fr;
+    grid-template-rows: 100vh 2fr .25fr 2fr .1fr 1.25fr .1fr;
     margin: 0;
     padding: 0;
     background-image:linear-gradient(0deg, rgba(211, 211, 211, 0.4), rgba(211, 211, 211, 0.4)), url(Hero2.jpg);
@@ -48,7 +48,7 @@ li a {
     list-style: none;
     text-decoration: none;
     color: var(--main-font-color);
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: var(--secondary-font-family);
     padding-right: 10px;
     padding-left: 10px;
@@ -139,7 +139,10 @@ h2.about-header {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.424);
     background-color: #d7dbde;
     padding: 4rem;
-    overflow: scroll;
+    overflow-y: scroll;
+    height: 350px;
+    font-family: var(--secondary-font-family);
+    font-size: 3rem;
 }
 
 div.donate-btn {
@@ -149,7 +152,7 @@ div.donate-btn {
     grid-row-end: 3;
     align-self: end;
     justify-self: center;
-    margin-bottom: 10rem;
+    margin-bottom: 7rem; 
 }
 
 h2.music-header {
@@ -175,6 +178,11 @@ h2.music-header {
     background-repeat: no-repeat;
 }
 
+iframe {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
 .music-video {
     font-family: var(--main-font-family);
     grid-column-start: 1;
@@ -195,9 +203,9 @@ h2.music-header {
     align-self: center;
     justify-self: center;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: center;
+    align-items: end;
+    margin-top: 14rem;
 }
 
 div.music-links {
@@ -208,7 +216,10 @@ div.music-links {
     justify-self: center;
     align-self: end;
     color: var(--main-font-color);
+    margin-top: 7rem;
+    margin-bottom: -2rem;
 }
+
 
 .social-music {
     list-style: none;
@@ -242,10 +253,12 @@ h2.reviews-header {
     border-radius: 10px;
     transition: 0.3s;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.424);
-    overflow: scroll;
+    overflow-y: scroll;
     padding: 3rem;
     margin-bottom: 7rem;
     background-color: #d7dbde;
+    height: 350px;
+    font-size: 3rem;
 }
 
 footer {
@@ -262,4 +275,22 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+h3 a {
+    text-decoration: none;
+    color: var(--main-font-color);
+}
+
+h3 a:hover {
+    color: blue;
+}
+
+h4 a {
+    text-decoration: none;
+    color: var(--main-font-color);
+}
+
+h4 a:hover {
+    color: blue;
 }
