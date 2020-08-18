@@ -142,11 +142,19 @@ h2.about-header {
     transition: 0.3s;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.424);
     background-color: #d7dbde;
-    padding: 4rem;
+    padding-top: 5px;
+    padding-right: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 4rem;
     overflow-y: scroll;
     height: 350px;
     font-family: var(--secondary-font-family);
     font-size: 3rem;
+}
+
+.underline {
+    text-decoration: underline;
+    font-family: var(--secondary-font-family);
 }
 
 div.donate-btn {
@@ -178,7 +186,7 @@ h2.music-header {
     grid-column-end: 7;
     grid-row-start: 3;
     grid-row-end: 5;
-    background-image: linear-gradient(0deg, rgba(211, 211, 211, 0.4), rgba(211, 211, 211, 0.4)), url(cover.jpg);
+    background-image: linear-gradient(0deg, rgba(211, 211, 211, 0.4), rgba(211, 211, 211, 0.4)), url(logo.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
