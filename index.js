@@ -1,4 +1,5 @@
 const mobileNav = document.querySelector('.nav-btn');
-mobileNav.addEventListener('click', function( {
-    
-}))
+const menu = document.querySelector('.navbar');
+mobileNav.addEventListener('click', function() {
+    menu.classList.add('open');
+});

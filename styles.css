@@ -124,7 +124,7 @@ h2.about-header {
     font-family: var(--main-font-family);
     font-size: 7rem;
     color: var(--secondary-font-color);
-    padding-top: 6rem;
+    padding-top: 7rem;
 }
 
 .about {
@@ -142,14 +142,17 @@ h2.about-header {
     transition: 0.3s;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.424);
     background-color: #d7dbde;
-    padding-top: 5px;
+    padding-top: 0;
     padding-right: 4rem;
     padding-bottom: 4rem;
     padding-left: 4rem;
     overflow-y: scroll;
     height: 350px;
     font-family: var(--secondary-font-family);
-    font-size: 3rem;
+}
+
+.bio {
+    font-size: 3.8rem;
 }
 
 .underline {
@@ -271,7 +274,7 @@ h2.reviews-header {
     margin-bottom: 7rem;
     background-color: #d7dbde;
     height: 350px;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 footer {
