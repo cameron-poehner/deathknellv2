@@ -335,7 +335,7 @@ h4 a:hover {
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
-    width: 100%;
+    width: 100vw;
     height: 5vh;
     border-bottom: 2px solid black;
     background-color: var(--secondary-bg-color);
@@ -352,7 +352,9 @@ h4 a:hover {
     height: 5vh;
     width: 100vw;
     margin: 0;
-    padding: 0;
+    padding: .75rem;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .nav {
@@ -467,7 +469,7 @@ p {
         grid-row-end: 4;
         align-self: end;
         justify-self: center;
-        padding-bottom: 1rem;
+        padding-bottom: 10rem;
     }
 
     .bio {
