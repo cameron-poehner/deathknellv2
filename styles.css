@@ -18,7 +18,7 @@
 .page-wrapper {
     display: grid; 
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 1fr 1.4fr .25fr 1.5fr .1fr 1fr .1fr;
+    grid-template-rows: 1fr 1fr .25fr 1.5fr .1fr 1fr .1fr;
     margin: 0;
     padding: 0;
     background-image:linear-gradient(0deg, rgba(211, 211, 211, 0.4), rgba(211, 211, 211, 0.4)), url(Hero.jpg);
@@ -38,20 +38,28 @@
     justify-items: end;
     position: fixed;
     z-index: 2;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-toggle {
+    height: 0px;
+    width: 0px;
+    visibility: hidden;
+    overflow: hidden;
 }
 
 .nav {
     display: flex;
     justify-content: flex-end;
+    list-style: none;
 }
 
 li a {
     list-style: none;
     text-decoration: none;
     color: var(--main-font-color);
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: var(--secondary-font-family);
     padding-right: 10px;
     padding-left: 10px;
@@ -59,7 +67,7 @@ li a {
 }
 
 li a:hover {
-    color: blue;
+    color: #e1cfa7;
 }
 
 .hero {
@@ -69,22 +77,22 @@ li a:hover {
     grid-column-end: 6;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     background: transparent;
-    margin-top: 20rem;
+    margin-top: 5rem;
     font-family: var(--main-font-family);
     color: var(--main-font-color);
 }
 
 h1 {
-    font-size: 10rem;
+    font-size: 8rem;
     letter-spacing: 2px;
 }
 
 p {
     font-family: var(--secondary-font-family);
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 button {
@@ -97,34 +105,27 @@ button {
     transition: 0.3s;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.424);
+    margin-top: 2rem;
 }
 
 button:hover {
     cursor: pointer;
     text-decoration: line-through;
-    background-color: blue;
+    background-color: #e1cfa7;
 }
 
-.fas {
-    margin-top: 30rem;
-}
-
-.hidden {
-    height: 0px;
-    visibility: hidden;
-}
 
 h2.about-header {
     grid-column-start: 1;
     grid-column-end: 7;
-    grid-row-start: 1;
+    grid-row-start: 2;
     grid-row-end: 3;
     justify-self: center;
-    align-self: center;
+    align-self: start;
     font-family: var(--main-font-family);
-    font-size: 7rem;
+    font-size: 5rem;
     color: var(--secondary-font-color);
-    padding-top: 7rem;
+    padding-bottom: 0rem;
 }
 
 .about {
@@ -147,17 +148,12 @@ h2.about-header {
     padding-bottom: 4rem;
     padding-left: 4rem;
     overflow-y: scroll;
-    height: 350px;
+    height: 200px;
     font-family: var(--secondary-font-family);
 }
 
 .bio {
-    font-size: 3.8rem;
-}
-
-.underline {
-    text-decoration: underline;
-    font-family: var(--secondary-font-family);
+    font-size: 2.2rem;
 }
 
 div.donate-btn {
@@ -167,7 +163,7 @@ div.donate-btn {
     grid-row-end: 3;
     align-self: end;
     justify-self: center;
-    margin-bottom: 10rem;
+    margin-bottom: 3rem;
     
 }
 
@@ -178,7 +174,7 @@ h2.music-header {
     grid-row-end: 4;
     justify-self: center;
     align-self: start;
-    font-size: 7rem;
+    font-size: 5rem;
     font-family: var(--main-font-family);
     color: var(--main-font-color);
     z-index: 1;
@@ -208,7 +204,10 @@ iframe {
     align-self: start;
     justify-self: center;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
 }
 
 .music-audio {
@@ -254,7 +253,7 @@ h2.reviews-header {
     grid-row-end: 6;
     justify-self: center;
     align-self: start;
-    font-size: 7rem;
+    font-size: 5rem;
 }
 
 .reviews {
@@ -274,6 +273,9 @@ h2.reviews-header {
     margin-bottom: 7rem;
     background-color: #d7dbde;
     height: 350px;
+}
+
+p {
     font-size: 2rem;
 }
 
@@ -299,7 +301,7 @@ h3 a {
 }
 
 h3 a:hover {
-    color: blue;
+    color: #e1cfa7;
 }
 
 h4 a {
@@ -308,8 +310,12 @@ h4 a {
 }
 
 h4 a:hover {
-    color: blue;
+    color: #e1cfa7;
 }
+
+/* @media only screen and (max-device-width: 1024px) {
+
+} */
 
 @media only screen and (max-device-width: 900px) {
 
@@ -329,35 +335,62 @@ h4 a:hover {
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
-    width: 100vw;
-    height: 2vh;
+    width: 100%;
+    height: 5vh;
     border-bottom: 2px solid black;
     background-color: var(--secondary-bg-color);
-    justify-items: end;
-    align-items: center;
     position: fixed;
     z-index: 2;
+    justify-self: end;
+
+}
+
+.nav-toggle {
+    color: var(--main-font-color);
+    background: none;
+    visibility: visible;
+    height: 5vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
 }
 
 .nav {
     display: flex;
-    justify-content: flex-end;
-    align-content: center;
+    flex-direction: column;    
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hidden {
+    height: 0%;
+    width: 0%;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.show-links {
+    height: 30vh;
+    width: 100vw;
+    transition: 0.3s;
+    list-style: none;
+    text-decoration: none;
+    font-family: var(--secondary-font-family);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
 }
 
 li a {
-    list-style: none;
-    text-decoration: none;
-    color: var(--main-font-color);
-    font-size: 1rem;
-    font-family: var(--secondary-font-family);
-    padding-right: 10px;
-    padding-left: 10px;
+    font-size: 1.5rem;
+    color: var(--secondary-font-color);
+    
 
 }
 
 li a:hover {
-    color: blue;
+    color: #e1cfa7;
+    text-decoration: line-through;
 }
 
 .hero {
@@ -368,9 +401,9 @@ li a:hover {
         justify-self: center;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         background: transparent;
-        margin-top: 20rem;
+        margin: 0px;
         font-family: var(--main-font-family);
         color: var(--main-font-color);
     }
@@ -382,7 +415,7 @@ h1 {
     
 p {
         font-family: var(--secondary-font-family);
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     button {
@@ -417,7 +450,10 @@ p {
         transition: 0.3s;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.424);
         background-color: #d7dbde;
-        padding: 2rem;
+        padding-top: .5rem;
+        padding-right: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 2rem;
         overflow-y: scroll;
         height: 100px;
         font-family: var(--secondary-font-family);
@@ -432,6 +468,10 @@ p {
         align-self: end;
         justify-self: center;
         padding-bottom: 1rem;
+    }
+
+    .bio {
+        font-size: 1.5rem;
     }
     
 
